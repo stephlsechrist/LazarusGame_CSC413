@@ -40,6 +40,7 @@ public class World {
     }
 
     public void tick(){
+
         entityManager.tick();
     }
 

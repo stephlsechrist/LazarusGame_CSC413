@@ -5,16 +5,15 @@ import dev.graphics.Assets;
 
 import java.awt.*;
 
-public class WoodBox extends Box{
-    public WoodBox(Handler handler, float x, float y) {
+public class WallBox extends Box {
+    private int boxType = 5;
 
+    public WallBox(Handler handler, float x, float y) {
         super(handler, x, y);
-        boxType = 2;
     }
 
     @Override
-    public boolean isSolid(){
-
+    public boolean isSolid() {
         return true;
     }
 
@@ -24,14 +23,10 @@ public class WoodBox extends Box{
     }
 
     @Override
-    public void tick(){
-
-        super.tick();
+    public void tick() {
     }
 
     @Override
     public void render(Graphics g) {
-
-        g.drawImage(Assets.woodBox, (int) x, (int) y, null);
     }
 }

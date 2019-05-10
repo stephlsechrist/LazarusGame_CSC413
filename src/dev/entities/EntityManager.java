@@ -1,6 +1,7 @@
 package dev.entities;
 
 import dev.Handler;
+import dev.entities.movingObjects.MovingObject;
 import dev.entities.movingObjects.Player;
 
 import java.awt.*;
@@ -29,13 +30,15 @@ public class EntityManager {
         //            if(!e.isActive())
         //                it.remove();
         //        }
+//        handler.getWorld().getEntityManager().player.tick();
 
         for (int i = 0; i < entities.size(); i++){
 
             Entity e = entities.get(i);
             e.tick();
-        }
 
+
+        }
     }
 
     public void render(Graphics g){

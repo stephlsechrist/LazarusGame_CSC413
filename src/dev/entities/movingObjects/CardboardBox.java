@@ -1,4 +1,35 @@
 package dev.entities.movingObjects;
 
-public class CardboardBox {
+import dev.Handler;
+import dev.graphics.Assets;
+
+import java.awt.*;
+
+public class CardboardBox extends Box{
+    public CardboardBox(Handler handler, float x, float y) {
+
+        super(handler, x, y);
+        boxType = 1;
+    }
+
+    @Override
+    public boolean isSolid(){
+
+        return true;
+    }
+
+    @Override
+    public int getBoxType() {
+        return this.boxType;
+    }
+
+    @Override
+    public void tick(){
+        super.tick();
+    }
+
+    public void render(Graphics g)
+    {
+        g.drawImage(Assets.cardboardBox, (int) x, (int) y, null);
+    }
 }

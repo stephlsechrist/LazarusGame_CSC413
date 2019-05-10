@@ -6,6 +6,7 @@ import dev.input.PlayerControl;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.util.Random;
 
 public class Player extends MovingObject {
 
@@ -15,6 +16,10 @@ public class Player extends MovingObject {
     private PlayerControl control;
     private int tankNumber;
     private int lifeCount;
+
+    private long lastAttackTimer;
+    private long attackCooldown = 1000 * 5;
+    private long attackTimer = attackCooldown;
 
     // attack timer
     // might not need these 3 statements; bullets hurt upon collision
@@ -34,9 +39,42 @@ public class Player extends MovingObject {
         lifeCount = 3;
     }
 
+    // as of right now, randomly chosen box added to level
+    // may change to be specific boxes added to make sure player can actually win
+    public void addNewBox(){
+
+        attackTimer += System.currentTimeMillis() - lastAttackTimer;
+        lastAttackTimer = System.currentTimeMillis();
+        if (attackTimer < attackCooldown)
+            return;
+
+        Random rand = new Random();
+        // generate random number between 1 & 4 to new box of different types
+        int newBoxNum = rand.nextInt(100) % 4 + 1;
+        System.out.println("new box number is " + newBoxNum + " " + System.currentTimeMillis());
+        if (newBoxNum == 1) {
+            CardboardBox cbox = new CardboardBox(handler, handler.getWorld().getEntityManager().getPlayer().getX(), -40);
+            handler.getWorld().getEntityManager().addEntity(cbox);
+        }
+        if (newBoxNum == 2){
+            WoodBox wbox = new WoodBox(handler, handler.getWorld().getEntityManager().getPlayer().getX(), -40);
+            handler.getWorld().getEntityManager().addEntity(wbox);
+        }
+        if (newBoxNum == 3){
+            MetalBox mbox = new MetalBox(handler, handler.getWorld().getEntityManager().getPlayer().getX(), -40);
+            handler.getWorld().getEntityManager().addEntity(mbox);
+        }
+        if (newBoxNum == 4){
+            StoneBox sbox = new StoneBox(handler, handler.getWorld().getEntityManager().getPlayer().getX(), -40);
+            handler.getWorld().getEntityManager().addEntity(sbox);
+        }
+        attackTimer = 0;
+    }
+
     @Override
     public void tick() {
         getInput();
+        addNewBox();
         //        System.out.println(angle);
         //        System.out.println(x);
         //        move();
@@ -96,6 +134,7 @@ public class Player extends MovingObject {
             //            {
             //                handler.getWorld().getEntityManager().printContents();
             //            }
+
     }
 
     @Override

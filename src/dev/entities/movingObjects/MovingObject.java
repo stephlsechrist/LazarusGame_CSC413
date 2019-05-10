@@ -3,6 +3,8 @@ package dev.entities.movingObjects;
 import dev.Handler;
 import dev.entities.Entity;
 
+import java.util.Random;
+
 public abstract class MovingObject extends Entity {
 
     //    public static final float DEFAULT_SPEED = 3.0f;
@@ -13,12 +15,16 @@ public abstract class MovingObject extends Entity {
     protected final int DEFAULT_SPEED = 6;
     private final int ROTATION_SPEED = 4;
     private long lastAttackTimer;
-    private long attackCooldown = 300;
+    private long attackCooldown = 1000;
     private long attackTimer = attackCooldown;
 
     private long lastMoveTimer;
     private long moveCoolDown = 300;
     private long moveTimer = moveCoolDown;
+
+    private long lastFallTimer;
+    private long fallCoolDown = 600;
+    private long fallTimer = fallCoolDown;
 
     //    public MovingObject(Handler handler, float x, float y, int vx, int vy, int angle){
     //        super(handler, x, y);
@@ -32,10 +38,6 @@ public abstract class MovingObject extends Entity {
         super(handler, x, y);
         speed = DEFAULT_SPEED;
         health = DEFAULT_HEALTH;
-
-    }
-
-    public void fall() {
 
     }
 
@@ -58,6 +60,36 @@ public abstract class MovingObject extends Entity {
         moveTimer = 0;
 
     }
+
+    public void moveFall(){
+        fallTimer += System.currentTimeMillis() - lastFallTimer;
+        lastFallTimer= System.currentTimeMillis();
+        if(fallTimer< fallCoolDown)
+            return;
+
+        vy = 40;
+        vx = 0;
+
+        x += vx;
+        y += vy;
+        fallTimer = 0;
+//        if (checkEntityCollisions())
+    }
+
+//    public void addNewBox(){
+//
+//        attackTimer += System.currentTimeMillis() - lastAttackTimer;
+//        lastAttackTimer = System.currentTimeMillis();
+//        if (attackTimer < attackCooldown)
+//            return;
+//
+//        Random rand = new Random();
+//        int newBoxNum = rand.nextInt(6) + 1;
+//        System.out.println("new box number is " + newBoxNum);
+//        CardboardBox cbox = new CardboardBox(handler, handler.getWorld().getEntityManager().getPlayer().getX(), 0);
+//        handler.getWorld().getEntityManager().addEntity(cbox);
+//        attackTimer = 0;
+//    }
 
     public void checkAttacks(){
         attackTimer += System.currentTimeMillis() - lastAttackTimer;
