@@ -6,7 +6,7 @@ import dev.graphics.Assets;
 import java.awt.*;
 
 public class StoneBox extends Box {
-    public StoneBox(Handler handler, float x, float y) {
+    public StoneBox(Handler handler, int x, int y) {
         super(handler, x, y);
         boxType = 4;
     }
@@ -31,6 +31,6 @@ public class StoneBox extends Box {
     @Override
     public void render(Graphics g) {
 
-        g.drawImage(Assets.stoneBox, (int) x, (int) y, null);
+        g.drawImage(Assets.stoneBox, x, y, null);
     }
 }

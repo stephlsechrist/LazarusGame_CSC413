@@ -27,15 +27,15 @@ public class Player extends MovingObject {
     //    private long attackCooldown = 400;
     //    private long attackTimer = attackCooldown;
 
-    public Player(Handler handler, float x, float y) {
+    public Player(Handler handler, int x, int y) {
         //        super(handler, x, y, vx, vy, angle);
         super(handler, x, y);
         health = 5;
 
         bounds.x = 0;
         bounds.y = 0;
-        bounds.width = 49;
-        bounds.height = 50;
+        bounds.width = 40;
+        bounds.height = 40;
         lifeCount = 3;
     }
 
@@ -80,7 +80,7 @@ public class Player extends MovingObject {
         //        move();
         //        checkAttacks();
         if(checkEntityCollisions(vx, vy)){
-            if(getEntityCollided((float) vx, (float) vy) instanceof Box){
+            if(getEntityCollided(vx, vy) instanceof Box){
                 System.out.println("Ran into Box, do something");
 
 //                handler.getWorld().getEntityManager().removeEntity(getEntityCollided((float) vx, (float) vy));
@@ -117,7 +117,7 @@ public class Player extends MovingObject {
 //                (int) (y + 70 +  - handler.getGameCam().getyOffset()),
 //                10 * health, 10);
 
-        g.drawImage(Assets.player, (int) x, (int) y, null);
+        g.drawImage(Assets.player, x, y, null);
     }
 
     private void getInput(){
@@ -141,8 +141,9 @@ public class Player extends MovingObject {
     public void die() {
         lifeCount--;
         health = 1;
-            x = handler.getWorld().getSpawnX1();
-            y = handler.getWorld().getSpawnY1();
+        x = handler.getWorld().getSpawnX1();
+        y = handler.getWorld().getSpawnY1();
+
         if (lifeCount == 0) {
             handler.getWorld().getEntityManager().removeEntity(this);
             handler.getGame().setState(handler.getGame().overState);

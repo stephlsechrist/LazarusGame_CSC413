@@ -6,7 +6,7 @@ import dev.graphics.Assets;
 import java.awt.*;
 
 public class WoodBox extends Box{
-    public WoodBox(Handler handler, float x, float y) {
+    public WoodBox(Handler handler, int x, int y) {
 
         super(handler, x, y);
         boxType = 2;
@@ -32,6 +32,6 @@ public class WoodBox extends Box{
     @Override
     public void render(Graphics g) {
 
-        g.drawImage(Assets.woodBox, (int) x, (int) y, null);
+        g.drawImage(Assets.woodBox, x, y, null);
     }
 }

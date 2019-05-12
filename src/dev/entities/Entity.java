@@ -10,8 +10,9 @@ public abstract class Entity {
 
     public static final int DEFAULT_HEALTH = 2;
     protected Handler handler;
-    protected float x;
-    protected float y;
+    protected int x;
+    protected int y;
+    protected int boxType;
     protected Rectangle bounds;
     protected boolean active = true;
     protected int health;
@@ -20,13 +21,13 @@ public abstract class Entity {
     //    protected int angle;
     //    private BufferedImage img;
 
-    public Entity(Handler handler, float x, float y){
+    public Entity(Handler handler, int x, int y){
         this.handler = handler;
         this.x = x;
         this.y = y;
         health = DEFAULT_HEALTH;
 
-        bounds = new Rectangle(0, 0, 64, 64);
+        bounds = new Rectangle(0, 0, 40, 40);
     }
 
     //    public Entity(Handler handler, float x, float y, int vx, int vy, int angle){
@@ -54,7 +55,7 @@ public abstract class Entity {
         }
     }
 
-    public boolean checkEntityCollisions(float xOffset, float yOffset){
+    public boolean checkEntityCollisions(int xOffset, int yOffset){
         for (Entity e : handler.getWorld().getEntityManager().getEntities()){
             if (e.equals(this))
                 continue;
@@ -65,12 +66,12 @@ public abstract class Entity {
         return false;
     }
 
-    public Rectangle getCollisionBounds(float xOffset, float yOffset){
-        return new Rectangle((int) (x + bounds.x + xOffset), (int) (y + bounds.y + yOffset),
+    public Rectangle getCollisionBounds(int xOffset, int yOffset){
+        return new Rectangle((x + bounds.x + xOffset), (y + bounds.y + yOffset),
                 bounds.width, bounds.height);
     }
 
-    public Entity getEntityCollided(float xOffset, float yOffset){
+    public Entity getEntityCollided(int xOffset, int yOffset){
         for (Entity e : handler.getWorld().getEntityManager().getEntities()) {
             if (e.equals(this))
                 continue;
@@ -81,20 +82,24 @@ public abstract class Entity {
         return null;
     }
 
-    public float getX() {
+    public int getX() {
         return x;
     }
 
-    public void setX(float x) {
+    public void setX(int x) {
         this.x = x;
     }
 
-    public float getY() {
+    public int getY() {
         return y;
     }
 
-    public void setY(float y) {
+    public void setY(int y) {
         this.y = y;
+    }
+
+    public int getBoxType (){
+        return boxType;
     }
 
     public boolean isActive() {

@@ -3,9 +3,9 @@ package dev;
 import dev.Handler;
 import dev.entities.EntityManager;
 import dev.entities.movingObjects.Player;
+import dev.entities.movingObjects.WallBox;
 import dev.entities.statics.NextBox;
 import dev.entities.statics.StopButton;
-import dev.entities.statics.Wall;
 import dev.graphics.Assets;
 import dev.tiles.Tile;
 import dev.utils.Utils;
@@ -56,7 +56,7 @@ public class World {
         for(int y = 0; y < height; y++){
             for(int x = 0; x < width; x++){
                 if (tilePos[x][y] != 0) {
-                    getTile(x, y).render(g, (int) (x * 40), (int) (y * 40));
+                    getTile(x, y).render(g, (x * 40), (y * 40));
                 }
             }
         }
@@ -88,8 +88,8 @@ public class World {
         for (int y = 0; y < height; y++){
             for (int x = 0; x < width; x++){
                 tilePos[x][y] = Utils.parseInt(tokens[(x+y * width) + 4]);
-                if(tilePos[x][y] == 1){
-                    entityManager.addEntity(new Wall(handler, (float) (x * 40), (float) (y * 40)));
+                if(tilePos[x][y] == 5){
+                    entityManager.addEntity(new WallBox(handler, (x * 40), (y * 40)));
                 }
             }
         }

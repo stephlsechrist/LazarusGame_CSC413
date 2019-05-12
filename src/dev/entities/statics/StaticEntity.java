@@ -6,7 +6,7 @@ import dev.entities.Entity;
 import java.awt.*;
 
 public class StaticEntity extends Entity {
-    public StaticEntity(Handler handler, float x, float y) {
+    public StaticEntity(Handler handler, int x, int y) {
 
         super(handler, x, y);
     }

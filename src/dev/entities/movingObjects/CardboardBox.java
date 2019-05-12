@@ -6,7 +6,7 @@ import dev.graphics.Assets;
 import java.awt.*;
 
 public class CardboardBox extends Box{
-    public CardboardBox(Handler handler, float x, float y) {
+    public CardboardBox(Handler handler, int x, int y) {
 
         super(handler, x, y);
         boxType = 1;
@@ -30,6 +30,6 @@ public class CardboardBox extends Box{
 
     public void render(Graphics g)
     {
-        g.drawImage(Assets.cardboardBox, (int) x, (int) y, null);
+        g.drawImage(Assets.cardboardBox, x, y, null);
     }
 }
