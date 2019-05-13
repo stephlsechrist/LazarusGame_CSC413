@@ -23,6 +23,6 @@ public class TryAgainState extends State {
     public void render(Graphics g) {
         handler.getWorld().render(g);
 
-        g.drawImage(Assets.intro, handler.getGame().getHeight()/4, handler.getGame().getWidth()/4, null);
+        g.drawImage(Assets.tryAgain, 0, 190, null);
     }
 }

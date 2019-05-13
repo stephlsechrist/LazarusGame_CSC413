@@ -1,10 +1,8 @@
 package dev;
 
-import dev.Handler;
 import dev.entities.EntityManager;
 import dev.entities.movingObjects.Player;
 import dev.entities.movingObjects.WallBox;
-import dev.entities.statics.NextBox;
 import dev.entities.statics.StopButton;
 import dev.graphics.Assets;
 import dev.tiles.Tile;
@@ -32,9 +30,10 @@ public class World {
         entityManager.getPlayer().setX(spawnX1);
         entityManager.getPlayer().setY(spawnY1);
 
-//        entityManager.addEntity(new StopButton(handler, 250, 300));
-//        entityManager.addEntity(new StopButton(handler, 600, 400));
+        entityManager.addEntity(new StopButton(handler, 40, 160));
+        entityManager.addEntity(new StopButton(handler, 560, 160));
 //        entityManager.addEntity(new NextBox(handler, 1000, 800));
+
 
         //        entityManager.addEntity(new DamageBoost(handler, 100, 800));
     }
@@ -46,11 +45,6 @@ public class World {
 
     // change this!
     public void render(Graphics g){
-//        int xStart = (int) Math.max(0, handler.getGameCam().getxOffset() / 64);
-//        int xEnd = (int) Math.min(width, (handler.getGameCam().getxOffset() + handler.getWidth()) / 64 + 1);
-//        int yStart = (int) Math.max(0, handler.getGameCam().getyOffset() / 64);
-//        int yEnd = (int) Math.min(height, (handler.getGameCam().getyOffset() + handler.getHeight()) / 64 + 1);
-
         g.drawImage(Assets.bg, 0, 0, null);
 
         for(int y = 0; y < height; y++){
@@ -60,8 +54,14 @@ public class World {
                 }
             }
         }
+        g.setColor(Color.BLACK);
+        g.fillRect(540, 340, 80, 80);
+
+        g.setColor(Color.BLACK);
+        g.fillRect(20, 340, 80, 80);
 
         entityManager.render(g);
+
     }
 
     public Tile getTile(int x, int y){
@@ -89,7 +89,7 @@ public class World {
             for (int x = 0; x < width; x++){
                 tilePos[x][y] = Utils.parseInt(tokens[(x+y * width) + 4]);
                 if(tilePos[x][y] == 5){
-                    entityManager.addEntity(new WallBox(handler, (x * 40), (y * 40)));
+                        entityManager.addEntity(new WallBox(handler, (x * 40), (y * 40)));
                 }
             }
         }

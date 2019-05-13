@@ -17,11 +17,11 @@ package dev;
 import Display.Display;
 import dev.entities.movingObjects.Player;
 import dev.graphics.Assets;
-import dev.graphics.GameCamera;
 import dev.input.PlayerControl;
 import dev.states.*;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
 
 public class Game implements Runnable{
@@ -42,10 +42,6 @@ public class Game implements Runnable{
 
     // Input
     private PlayerControl control;
-    //    private Tank tank1;
-
-    // Camera
-    private GameCamera gameCam;
 
     // Handler
     private Handler handler;
@@ -54,9 +50,6 @@ public class Game implements Runnable{
         this.width = width;
         this.height = height;
         this.title = title;
-
-        //        tank1 = new Tank(this,500, 200, 0, 0, 0, Assets.tank);
-        //        tc = new TankControl(tank1, KeyEvent.VK_UP, KeyEvent.VK_DOWN, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT);
         control = new PlayerControl();
     }
 
@@ -68,7 +61,6 @@ public class Game implements Runnable{
 
 
         handler = new Handler(this);
-        gameCam = new GameCamera(handler, 0,0);
 
         gameState = new GameState(handler);
         introState = new IntroState(handler);
@@ -150,10 +142,6 @@ public class Game implements Runnable{
     public PlayerControl getControl() {
 
         return control;
-    }
-
-    public GameCamera getGameCam(){
-        return gameCam;
     }
 
     public int getWidth() {

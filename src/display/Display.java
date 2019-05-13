@@ -21,7 +21,7 @@ public class Display {
     }
 
     private void createDisplay(){
-        frame = new JFrame("Tank Game");
+        frame = new JFrame("Lazarus");
         frame.setSize(width, height);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);

@@ -22,6 +22,6 @@ public class IntroState extends State{
     public void render(Graphics g) {
 
 
-        g.drawImage(Assets.intro, handler.getGame().getHeight()/4, handler.getGame().getWidth()/4, null);
+        g.drawImage(Assets.intro, 0, 0, null);
     }
 }

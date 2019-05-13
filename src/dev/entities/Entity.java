@@ -16,10 +16,6 @@ public abstract class Entity {
     protected Rectangle bounds;
     protected boolean active = true;
     protected int health;
-    //    protected int vx;
-    //    protected int vy;
-    //    protected int angle;
-    //    private BufferedImage img;
 
     public Entity(Handler handler, int x, int y){
         this.handler = handler;
@@ -29,18 +25,6 @@ public abstract class Entity {
 
         bounds = new Rectangle(0, 0, 40, 40);
     }
-
-    //    public Entity(Handler handler, float x, float y, int vx, int vy, int angle){
-    //        this.handler = handler;
-    //        this.x = x;
-    //        this.y = y;
-    //        this.vx = vx;
-    //        this.vy = vy;
-    //        this.angle = angle;
-    //
-    //        bounds = new Rectangle(0, 0, 64, 64);
-    //        //        this.img = img;
-    //    }
 
     public abstract void tick();
     public abstract void render(Graphics g);

@@ -10,9 +10,7 @@ import java.awt.event.KeyListener;
 
 public class PlayerControl implements KeyListener {
     private boolean[] keys;
-    //    private static int[] keys;
     public boolean left, right, play, exit;
-    //    public int up1, down1, left1, right1;
 
     public PlayerControl() {
         keys = new boolean[256];

@@ -1,7 +1,6 @@
 package dev.entities;
 
 import dev.Handler;
-import dev.entities.movingObjects.MovingObject;
 import dev.entities.movingObjects.Player;
 
 import java.awt.*;
@@ -10,7 +9,6 @@ import java.util.ArrayList;
 public class EntityManager {
     private Handler handler;
     private Player player;
-    //    private LifeBoost lifeBoost;
     private ArrayList<Entity> entities;
 
     public EntityManager(Handler handler, Player player){
@@ -22,22 +20,9 @@ public class EntityManager {
     }
 
     public void tick(){
-        //        Iterator<Entity> it = entities.iterator();
-        //
-        //        while(it.hasNext()){
-        //            Entity e = it.next();
-        //            e.tick();
-        //            if(!e.isActive())
-        //                it.remove();
-        //        }
-//        handler.getWorld().getEntityManager().player.tick();
-
         for (int i = 0; i < entities.size(); i++){
-
             Entity e = entities.get(i);
             e.tick();
-
-
         }
     }
 

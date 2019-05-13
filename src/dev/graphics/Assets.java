@@ -8,17 +8,19 @@ import java.awt.image.BufferedImage;
 
 public class Assets {
     public static BufferedImage intro, bg, player, cardboardBox, metalBox,
-    stoneBox, woodBox, stopButton, end, wall;
+    stoneBox, woodBox, stopButton, end, wall, tryAgain, life;
 //    private static final int dim = 64;
 
     public static void init(){
-        intro = ImageLoader.loadImage("/resources/intro.png");
+        intro = ImageLoader.loadImage("/resources/Title.png");
         bg = ImageLoader.loadImage("/resources/Background.bmp");
+        tryAgain = ImageLoader.loadImage("/resources/tryagain.png");
         end = ImageLoader.loadImage("/resources/game_over.png");
 
         player = ImageLoader.loadImage("/resources/Lazarus.png");
         wall = ImageLoader.loadImage("/resources/Wall.gif");
         stopButton = ImageLoader.loadImage("/resources/Button.gif");
+        life = ImageLoader.loadImage("/resources/heart.png");
 
         cardboardBox = ImageLoader.loadImage("/resources/CardBox.gif");
         metalBox = ImageLoader.loadImage("/resources/MetalBox.png");

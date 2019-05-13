@@ -12,10 +12,6 @@ public class Tile {
 
     // create one instance of a tile and store in tiles array
     public static Tile noTile = new Tile(null, 0);
-    public static Tile cardboardTile = new CardboardTile(Assets.cardboardBox, 1);
-    public static Tile woodTile = new WoodTile(Assets.woodBox, 2);
-    public static Tile metalTile = new MetalTile(Assets.metalBox, 3);
-    public static Tile stoneTile = new StoneTile(Assets.stoneBox, 4);
     public static Tile wallTile = new WallTile(Assets.wall, 5);
 
     // CLASS
