@@ -12,7 +12,7 @@ public class Assets {
 //    private static final int dim = 64;
 
     public static void init(){
-        intro = ImageLoader.loadImage("/resources/Title.gif");
+        intro = ImageLoader.loadImage("/resources/intro.png");
         bg = ImageLoader.loadImage("/resources/Background.bmp");
         end = ImageLoader.loadImage("/resources/game_over.png");
 
@@ -23,6 +23,6 @@ public class Assets {
         cardboardBox = ImageLoader.loadImage("/resources/CardBox.gif");
         metalBox = ImageLoader.loadImage("/resources/MetalBox.png");
         stoneBox = ImageLoader.loadImage("/resources/StoneBox.gif");
-        woodBox = ImageLoader.loadImage("/resources/WoodBox.gif");
+        woodBox = ImageLoader.loadImage("/resources/WoodBox.png");
     }
 }

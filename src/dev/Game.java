@@ -19,10 +19,7 @@ import dev.entities.movingObjects.Player;
 import dev.graphics.Assets;
 import dev.graphics.GameCamera;
 import dev.input.PlayerControl;
-import dev.states.GameState;
-import dev.states.IntroState;
-import dev.states.OverState;
-import dev.states.State;
+import dev.states.*;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -41,6 +38,7 @@ public class Game implements Runnable{
     public State gameState;
     public State introState;
     public State overState;
+    public State tryAgainState;
 
     // Input
     private PlayerControl control;
@@ -75,8 +73,9 @@ public class Game implements Runnable{
         gameState = new GameState(handler);
         introState = new IntroState(handler);
         overState = new OverState(handler);
-        //        State.setState(introState);
-        State.setState(gameState);
+        tryAgainState = new TryAgainState(handler);
+                State.setState(introState);
+//        State.setState(gameState);
     }
 
     private void tick(){

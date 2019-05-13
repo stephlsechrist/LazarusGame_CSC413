@@ -1,26 +1,27 @@
 package dev.states;
 
-import dev.states.State;
-import dev.Game;
 import dev.Handler;
+import dev.World;
 import dev.graphics.Assets;
 
 import java.awt.*;
 
-public class IntroState extends State{
-    public IntroState(Handler handler){
+public class TryAgainState extends State {
+    public TryAgainState(Handler handler) {
         super(handler);
     }
 
     @Override
     public void tick() {
+        handler.getWorld().getEntityManager().clearEntities();
+
         if(handler.getControl().play)
             State.setState(handler.getGame().gameState);
     }
 
     @Override
     public void render(Graphics g) {
-
+        handler.getWorld().render(g);
 
         g.drawImage(Assets.intro, handler.getGame().getHeight()/4, handler.getGame().getWidth()/4, null);
     }

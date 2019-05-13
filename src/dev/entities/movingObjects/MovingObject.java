@@ -47,7 +47,18 @@ public abstract class MovingObject extends Entity {
         if(moveTimer < moveCoolDown)
             return;
 
-        x -= 40;
+        if (!checkEntityCollisions(-40, 0))
+            x-= 40;
+
+        if (checkEntityCollisions(-40, 0) && !(getEntityCollided(-40, 0) instanceof WallBox)){
+            if (getEntityCollided(-40, 0) instanceof Box){
+                if (!checkEntityCollisions(-40, -40)) {
+                    x -= 40;
+                    y -= 40;
+                }
+            }
+        }
+
         moveTimer = 0;
     }
 
@@ -56,7 +67,19 @@ public abstract class MovingObject extends Entity {
         lastMoveTimer = System.currentTimeMillis();
         if(moveTimer < moveCoolDown)
             return;
-        x+= 40;
+
+        if (!checkEntityCollisions(40, 0))
+            x+= 40;
+
+        if (checkEntityCollisions(40, 0) && !(getEntityCollided(40, 0) instanceof WallBox)){
+            if (getEntityCollided(40, 0) instanceof Box){
+                if (!checkEntityCollisions(40, -40)) {
+                    x += 40;
+                    y -= 40;
+                }
+            }
+        }
+
         moveTimer = 0;
 
     }

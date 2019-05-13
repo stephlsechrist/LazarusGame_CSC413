@@ -30,7 +30,7 @@ public class Player extends MovingObject {
     public Player(Handler handler, int x, int y) {
         //        super(handler, x, y, vx, vy, angle);
         super(handler, x, y);
-        health = 5;
+        health = 1;
 
         bounds.x = 0;
         bounds.y = 0;
@@ -79,16 +79,21 @@ public class Player extends MovingObject {
         //        System.out.println(x);
         //        move();
         //        checkAttacks();
-        if(checkEntityCollisions(vx, vy)){
-            if(getEntityCollided(vx, vy) instanceof Box){
-                System.out.println("Ran into Box, do something");
+//        if(checkEntityCollisions(vx, vy)){
+//            if(getEntityCollided(vx, vy) instanceof Box){
+//                vy = -40;
+//                System.out.println("Ran into Box, do something");
 
 //                handler.getWorld().getEntityManager().removeEntity(getEntityCollided((float) vx, (float) vy));
 //                lifeCount++;
-            }
+//            }
             //            if(getEntityCollided((float) vx, (float) vy) instanceof DamageBoost){
             //                handler.getWorld().getEntityManager().removeEntity(getEntityCollided((float) vx, (float) vy));
             //            }
+//        }
+
+        if (!(getEntityCollided(0, 20) instanceof Box)){
+            y += 40;
         }
     }
 
@@ -139,13 +144,18 @@ public class Player extends MovingObject {
 
     @Override
     public void die() {
+//        handler.getWorld().getEntityManager().removeEntity(this);
         lifeCount--;
         health = 1;
         x = handler.getWorld().getSpawnX1();
         y = handler.getWorld().getSpawnY1();
 
-        if (lifeCount == 0) {
-            handler.getWorld().getEntityManager().removeEntity(this);
+        if (lifeCount != 0) {
+            handler.getGame().setState(handler.getGame().tryAgainState);
+//            handler.getWorld().worldReset();
+        }
+
+        else if (lifeCount == 0) {
             handler.getGame().setState(handler.getGame().overState);
         }
     }

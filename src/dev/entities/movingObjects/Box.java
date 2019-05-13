@@ -25,18 +25,16 @@ public abstract class Box extends MovingObject {
 //        return 0;
 //    }
 
-    public boolean crush (int x, int y, int vx, int vy){
-        if (getEntityCollided(vx, vy) instanceof Box){
-//            int crusher = handler.getWorld().getEntityManager().get
-
-        }
-
-        return false;
-    }
-
     @Override
     public void die() {
         handler.getWorld().getEntityManager().removeEntity(this);
+    }
+
+    public boolean crush (int vx, int vy){
+        if (this.getBoxType() > getEntityCollided(vx, vy).getBoxType())
+            return true;
+
+        return false;
     }
 
     public void moveFall(){
@@ -53,16 +51,17 @@ public abstract class Box extends MovingObject {
             x += vx;
             y += vy;
         }
-        if (getEntityCollided(vx, vy) instanceof Box){
-            System.out.println("Entity below is a box");
 
-            if (this.getBoxType() > getEntityCollided(vx, vy).getBoxType()) {
-                System.out.println("Entity below is a weaker box");
+        if (getEntityCollided(vx, vy) instanceof Box){
+            if (crush(vx, vy))
                 handler.getWorld().getEntityManager().removeEntity(getEntityCollided(vx, vy));
-                System.out.println("crush!");
-            }
         }
-        
+
+        if (getEntityCollided(vx, vy) instanceof Player){
+            handler.getWorld().getEntityManager().getPlayer().hurt(1);
+        }
+
+
         fallTimer = 0;
     }
 

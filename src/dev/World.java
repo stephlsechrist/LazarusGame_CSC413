@@ -95,6 +95,10 @@ public class World {
         }
     }
 
+//    public void worldReset(){
+//        handler.getWorld().getEntityManager().reset();
+//    }
+
     public void setTileArray(int x, int y, int newID){
         this.tilePos[x][y] = newID;
     }

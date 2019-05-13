@@ -55,6 +55,12 @@ public class EntityManager {
         }
     }
 
+    public void clearEntities(){
+        for (int i = 0; i < entities.size(); i++){
+            entities.remove(0);
+        }
+    }
+
     public void addEntity(Entity e){
         entities.add(e);
     }
