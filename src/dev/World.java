@@ -5,6 +5,8 @@ import dev.entities.movingObjects.Player;
 import dev.entities.movingObjects.WallBox;
 import dev.entities.statics.StopButton;
 import dev.graphics.Assets;
+import dev.states.State;
+import dev.states.TryAgainState;
 import dev.tiles.Tile;
 import dev.utils.Utils;
 
@@ -62,6 +64,12 @@ public class World {
 
         entityManager.render(g);
 
+    }
+
+    public void tryLevelAgain(){
+        if (State.getState() instanceof TryAgainState){
+            ((TryAgainState) State.getState()).tryLevelAgain();
+        }
     }
 
     public Tile getTile(int x, int y){

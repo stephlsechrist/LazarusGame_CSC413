@@ -32,8 +32,8 @@ public abstract class MovingObject extends Entity {
 
         if (!checkEntityCollisions(-40, 0))
             x-= 40;
-
-        else if (checkEntityCollisions(-40, 0) && !(getEntityCollided(-40, 0) instanceof WallBox)){
+// && !(getEntityCollided(-40, 0) instanceof WallBox)
+        else if (checkEntityCollisions(-40, 0)){
             if (getEntityCollided(-40, 0) instanceof Box){
                 if (!checkEntityCollisions(-40, -40)) {
                     x -= 40;
@@ -55,8 +55,8 @@ public abstract class MovingObject extends Entity {
             x += 40;
 
         }
-
-        else if (checkEntityCollisions(40, 0) && !(getEntityCollided(40, 0) instanceof WallBox)){
+// && !(getEntityCollided(40, 0) instanceof WallBox)
+        else if (checkEntityCollisions(40, 0)){
             if (getEntityCollided(40, 0) instanceof Box){
                 if (!checkEntityCollisions(40, -40)) {
                     x += 40;

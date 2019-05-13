@@ -49,7 +49,7 @@ public class Player extends MovingObject {
         int newBoxNum = nextBox;
         nextBox = rand.nextInt(100) % 4 + 1;
 
-        if (handler.getWorld().getEntityManager().getPlayer().getX() > 120 &&
+        if (handler.getWorld().getEntityManager().getPlayer().getX() >= 120 &&
                 handler.getWorld().getEntityManager().getPlayer().getX() < 560) {
             if (newBoxNum == 1) {
                 CardboardBox cbox = new CardboardBox(handler, handler.getWorld().getEntityManager().getPlayer().getX(), -40);
@@ -82,6 +82,8 @@ public class Player extends MovingObject {
 
         if (getEntityCollided(40, 0) instanceof StopButton || getEntityCollided(-40, 0) instanceof StopButton){
             System.out.println("you win!");
+            handler.getGame().nextLevel();
+//            handler.getGame().setState(handler.getGame().nextLevelState);
         }
     }
 
@@ -122,6 +124,14 @@ public class Player extends MovingObject {
 
     }
 
+    public int getLifeCount(){
+        return lifeCount;
+    }
+
+    public void setLifeCount(int lifeCount){
+        this.lifeCount = lifeCount;
+    }
+
     @Override
     public void die() {
 //        handler.getWorld().getEntityManager().removeEntity(this);
@@ -131,7 +141,9 @@ public class Player extends MovingObject {
         y = handler.getWorld().getSpawnY1();
 
         if (lifeCount != 0) {
+            handler.getWorld().getEntityManager().clearEntities();
             handler.getGame().setState(handler.getGame().tryAgainState);
+            handler.getWorld().tryLevelAgain();
 //            handler.getWorld().worldReset();
         }
 

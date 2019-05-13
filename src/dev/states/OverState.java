@@ -19,7 +19,7 @@ public class OverState extends State {
     @Override
     public void render(Graphics g) {
         handler.getWorld().render(g);
-        g.drawImage(Assets.end, handler.getGame().getHeight()/4, handler.getGame().getWidth()/4, null);
+        g.drawImage(Assets.end, 210, 200, null);
         if (handler.getControl().exit)
             System.exit(0);
     }

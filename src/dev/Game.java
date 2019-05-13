@@ -39,6 +39,7 @@ public class Game implements Runnable{
     public State introState;
     public State overState;
     public State tryAgainState;
+    public State nextLevelState;
 
     // Input
     private PlayerControl control;
@@ -66,8 +67,9 @@ public class Game implements Runnable{
         introState = new IntroState(handler);
         overState = new OverState(handler);
         tryAgainState = new TryAgainState(handler);
-                State.setState(introState);
-//        State.setState(gameState);
+        nextLevelState = new NextLevelState(handler);
+                State.setState(gameState);
+//        State.setState(overState);
     }
 
     private void tick(){
@@ -98,6 +100,12 @@ public class Game implements Runnable{
         //End draw
         bs.show();
         g.dispose();
+    }
+
+    public void nextLevel(){
+        if (State.getState() instanceof GameState){
+            ((GameState) State.getState()).nextLevel();
+        }
     }
 
     public void run(){

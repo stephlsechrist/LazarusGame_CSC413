@@ -7,16 +7,34 @@ import dev.graphics.Assets;
 import java.awt.*;
 
 public class TryAgainState extends State {
+    private int lifeCount;
+    private World world;
+
     public TryAgainState(Handler handler) {
         super(handler);
+
+    }
+
+    public void tryLevelAgain(){
+        lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
+        world = new World(handler, "\\src\\resources\\world1.txt");
+        handler.setWorld(world);
+        handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
     }
 
     @Override
     public void tick() {
+//        handler.getWorld().getEntityManager().clearEntities();
         handler.getWorld().getEntityManager().clearEntities();
 
-        if(handler.getControl().play)
+
+        if(handler.getControl().play) {
             State.setState(handler.getGame().gameState);
+        }
+//        lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
+//        world = new World(handler, "\\src\\resources\\world1.txt");
+//        handler.setWorld(world);
+//        handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
     }
 
     @Override
