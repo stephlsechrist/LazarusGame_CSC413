@@ -2,8 +2,11 @@ package dev.entities;
 
 import dev.Handler;
 import dev.entities.movingObjects.Player;
+import dev.entities.movingObjects.WallBox;
+import dev.entities.statics.StopButton;
 
 import java.awt.*;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class EntityManager {
@@ -42,8 +45,14 @@ public class EntityManager {
 
     public void clearEntities(){
         for (int i = 0; i < entities.size(); i++){
-            entities.remove(0);
+            if (!(entities.get(i) instanceof WallBox) && !(entities.get(i) instanceof StopButton)) {
+                    entities.remove(i);
+//                    System.out.println("Current entities");
+//                    printContents();
+            }
         }
+
+        addEntity(player);
     }
 
     public void addEntity(Entity e){

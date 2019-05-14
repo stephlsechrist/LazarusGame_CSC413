@@ -2,6 +2,7 @@ package dev.states;
 
 import dev.Handler;
 import dev.World;
+import dev.entities.movingObjects.Player;
 import dev.graphics.Assets;
 
 import java.awt.*;
@@ -9,6 +10,7 @@ import java.awt.*;
 public class TryAgainState extends State {
     private int lifeCount;
     private World world;
+    private Player player;
 
     public TryAgainState(Handler handler) {
         super(handler);
@@ -17,8 +19,10 @@ public class TryAgainState extends State {
 
     public void tryLevelAgain(){
         lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
+//        player = handler.getWorld().getEntityManager().getPlayer();
         world = new World(handler, "\\src\\resources\\world1.txt");
         handler.setWorld(world);
+//        handler.getWorld().getEntityManager().setPlayer(player);
         handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
     }
 
@@ -31,9 +35,6 @@ public class TryAgainState extends State {
         if(handler.getControl().play) {
             State.setState(handler.getGame().gameState);
         }
-//        lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
-//        world = new World(handler, "\\src\\resources\\world1.txt");
-//        handler.setWorld(world);
 //        handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
     }
 

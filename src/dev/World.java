@@ -15,6 +15,8 @@ import java.awt.*;
 public class World {
     private Handler handler;
     private int width, height, spawnX1, spawnY1;
+    private int lifeCount;
+    private World world;
     private int[][] tilePos;
 
     // Entities
@@ -104,7 +106,11 @@ public class World {
     }
 
 //    public void worldReset(){
-//        handler.getWorld().getEntityManager().reset();
+//        lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
+//        world = new World(handler, "\\src\\resources\\world1.txt");
+//        handler.setWorld(world);
+//        handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
+//        handler.getWorld().getEntityManager().clearEntities();
 //    }
 
     public void setTileArray(int x, int y, int newID){

@@ -142,9 +142,9 @@ public class Player extends MovingObject {
 
         if (lifeCount != 0) {
             handler.getWorld().getEntityManager().clearEntities();
-            handler.getGame().setState(handler.getGame().tryAgainState);
-            handler.getWorld().tryLevelAgain();
 //            handler.getWorld().worldReset();
+            handler.getGame().setState(handler.getGame().tryAgainState);
+//                        handler.getWorld().tryLevelAgain();
         }
 
         else if (lifeCount == 0) {
