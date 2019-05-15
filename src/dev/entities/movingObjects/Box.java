@@ -9,13 +9,14 @@ public abstract class Box extends MovingObject {
     protected int boxType;
 
     private long lastFallTimer;
-    private long fallCoolDown = 600;
+    private long fallCoolDown = 500;
     private long fallTimer = fallCoolDown;
 
     public Box(Handler handler, int x, int y) {
 
         super(handler, x, y);
         boxType = 0;
+        setFallCoolDown(handler.getGame().getLevelNum());
     }
 
     public abstract boolean isSolid();
@@ -36,7 +37,7 @@ public abstract class Box extends MovingObject {
     public void moveFall(){
             fallTimer += System.currentTimeMillis() - lastFallTimer;
             lastFallTimer= System.currentTimeMillis();
-            if(fallTimer< fallCoolDown)
+            if(fallTimer < fallCoolDown)
                 return;
 
             vy = 40;
@@ -57,6 +58,11 @@ public abstract class Box extends MovingObject {
                 handler.getWorld().getEntityManager().getPlayer().hurt(1);
             }
         fallTimer = 0;
+    }
+
+    public void setFallCoolDown(int factor){
+        fallCoolDown = fallCoolDown - (100*factor);
+
     }
 
     @Override

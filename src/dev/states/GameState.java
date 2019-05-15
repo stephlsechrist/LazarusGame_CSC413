@@ -8,7 +8,6 @@ import java.util.Map;
 
 public class GameState extends State{
     private World world;
-    private int levelNum = 0;
     private int lifeCount;
 
     public GameState(Handler handler){
@@ -19,9 +18,11 @@ public class GameState extends State{
 
     public void nextLevel(){
         lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
-        world = new World(handler, "\\src\\resources\\world2.txt");
+        if (handler.getGame().getLevelNum() == 2)
+            world = new World(handler, "\\src\\resources\\world2.txt");
+        if (handler.getGame().getLevelNum() == 3)
+            world = new World(handler, "\\src\\resources\\world3.txt");
         handler.setWorld(world);
-        levelNum++;
         handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
     }
 

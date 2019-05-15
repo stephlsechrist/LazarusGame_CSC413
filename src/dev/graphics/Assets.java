@@ -6,16 +6,21 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Assets {
-    public static BufferedImage intro, bg, player, cardboardBox, metalBox,
-    stoneBox, woodBox, stopButton, end, wall, tryAgain, life, level2;
+    public static BufferedImage intro, bg, end, tryAgain, win,
+    level1, level2, level3, player, cardboardBox, metalBox,
+    stoneBox, woodBox, stopButton, wall, life;
 //    private static final int dim = 64;
 
     public static void init(){
         intro = ImageLoader.loadImage("/resources/Title.png");
         bg = ImageLoader.loadImage("/resources/Background.bmp");
         tryAgain = ImageLoader.loadImage("/resources/tryagain.png");
-//        level2 = ImageLoader.loadImage("resources/level2.png");
         end = ImageLoader.loadImage("/resources/game_over2.png");
+        win = ImageLoader.loadImage("/resources/win.png");
+
+        level1 = ImageLoader.loadImage("/resources/level1.png");
+        level2 = ImageLoader.loadImage("/resources/level2.png");
+        level3 = ImageLoader.loadImage("/resources/level3.png");
 
         player = ImageLoader.loadImage("/resources/Lazarus.png");
         wall = ImageLoader.loadImage("/resources/Wall.gif");

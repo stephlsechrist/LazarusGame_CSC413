@@ -14,13 +14,18 @@ public class OverState extends State {
     public void tick() {
         //        if(handler.getTankControl1().space)
         //            State.setState(handler.getGame().overState);
+        if (handler.getControl().exit)
+            System.exit(0);
     }
 
     @Override
     public void render(Graphics g) {
         handler.getWorld().render(g);
-        g.drawImage(Assets.end, 210, 200, null);
-        if (handler.getControl().exit)
-            System.exit(0);
+
+        if (handler.getGame().getLevelNum() == 3 && !(handler.getWorld().getEntityManager().getPlayer().getDeadStatus()))
+            g.drawImage(Assets.win, 0, 190, null);
+        else
+            g.drawImage(Assets.end, 210, 200, null);
+
     }
 }

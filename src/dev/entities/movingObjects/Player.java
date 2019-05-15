@@ -15,6 +15,7 @@ public class Player extends MovingObject {
 
     private PlayerControl control;
     private int lifeCount;
+    private boolean isDead;
 
     Random rand = new Random();
     private int nextBox;
@@ -81,9 +82,8 @@ public class Player extends MovingObject {
         }
 
         if (getEntityCollided(40, 0) instanceof StopButton || getEntityCollided(-40, 0) instanceof StopButton){
-            System.out.println("you win!");
-            handler.getGame().nextLevel();
-//            handler.getGame().setState(handler.getGame().nextLevelState);
+//            handler.getGame().nextLevel();
+            handler.getGame().setState(handler.getGame().nextLevelState);
         }
     }
 
@@ -96,6 +96,9 @@ public class Player extends MovingObject {
             g.drawImage(Assets.life, xpos, 360, null);
             xpos += 20;
         }
+//        g.setFont(new Font("Helvetica", Font.BOLD, 12));
+//        g.setColor(Color.WHITE);
+//        g.drawString("Level " + String.valueOf(handler.getGame().getLevelNum()), 40, 400);
 
 
         if (nextBox == 1) {
@@ -124,6 +127,10 @@ public class Player extends MovingObject {
 
     }
 
+    public boolean getDeadStatus(){
+        return isDead;
+    }
+
     public int getLifeCount(){
         return lifeCount;
     }
@@ -148,6 +155,7 @@ public class Player extends MovingObject {
         }
 
         else if (lifeCount == 0) {
+            isDead = true;
             handler.getGame().setState(handler.getGame().overState);
         }
     }

@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9594a7d-c184-423c-b3f7-ee1fee801d6e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/resources/world3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/worldtemp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/entities/EntityManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/entities/EntityManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/entities/movingObjects/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/entities/movingObjects/Box.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/entities/movingObjects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/entities/movingObjects/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/states/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/states/GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/states/NextLevelState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/dev/states/NextLevelState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/level2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/level2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/tryagain.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/tryagain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/world1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/world1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/world2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-secondgame-stephlsechrist/resources/world2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/entities/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/entities/EntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/entities/movingObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/entities/movingObjects/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/states/TryAgainState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/states/TryAgainState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/states/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/states/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/states/NextLevelState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/states/NextLevelState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/states/OverState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/states/OverState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/level2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/level2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/tryagain.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/tryagain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/world1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/world1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/world2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/world2.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,14 +40,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/states/NextLevelState.java">
+        <entry file="file://$PROJECT_DIR$/src/dev/entities/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="-85">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,8 +54,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/entities/movingObjects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="147" column="9" lean-forward="true" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+            <state relative-caret-position="275">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3980#3981#0" expanded="true" />
+                <element signature="e#3997#3998#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/states/OverState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="24" column="121" selection-start-line="24" selection-start-column="121" selection-end-line="24" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,59 +78,79 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/World.java">
+        <entry file="file://$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="113" selection-end-column="7" />
+            <state relative-caret-position="986">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3257#3258#0" expanded="true" />
-                <element signature="e#3293#3294#0" expanded="true" />
-                <element signature="e#3328#3329#0" expanded="true" />
-                <element signature="e#3358#3359#0" expanded="true" />
-                <element signature="e#3405#3406#0" expanded="true" />
-                <element signature="e#3443#3444#0" expanded="true" />
-                <element signature="e#3473#3474#0" expanded="true" />
-                <element signature="e#3503#3504#0" expanded="true" />
-                <element signature="e#3546#3547#0" expanded="true" />
-                <element signature="e#3584#3585#0" expanded="true" />
-                <element signature="e#3615#3616#0" expanded="true" />
-                <element signature="e#3645#3646#0" expanded="true" />
-                <element signature="e#3688#3689#0" expanded="true" />
-                <element signature="e#3726#3727#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+                <element signature="e#1575#1576#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dev/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4201#4202#0" expanded="true" />
+                <element signature="e#4232#4233#0" expanded="true" />
+                <element signature="e#4277#4278#0" expanded="true" />
+                <element signature="e#4317#4318#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dev/entities/EntityManager.java">
+        <entry file="file://$PROJECT_DIR$/src/dev/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="275">
+              <caret line="72" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1550#1551#0" expanded="true" />
-                <element signature="e#1581#1582#0" expanded="true" />
-                <element signature="e#1610#1611#0" expanded="true" />
-                <element signature="e#1695#1696#0" expanded="true" />
-                <element signature="e#1757#1758#0" expanded="true" />
-                <element signature="e#1837#1838#0" expanded="true" />
-                <element signature="e#1914#1915#0" expanded="true" />
-                <element signature="e#2013#2014#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dev/states/TryAgainState.java">
+        <entry file="file://$PROJECT_DIR$/src/resources/worldtemp.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="32" selection-start-line="32" selection-end-line="45" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/world2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/world1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/world3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -143,10 +195,6 @@
         <option value="$PROJECT_DIR$/src/dev/entities/movingObjects/WoodBox.java" />
         <option value="$PROJECT_DIR$/src/dev/entities/statics/StaticEntity.java" />
         <option value="$PROJECT_DIR$/src/dev/entities/statics/StopButton.java" />
-        <option value="$PROJECT_DIR$/src/dev/states/IntroState.java" />
-        <option value="$PROJECT_DIR$/src/resources/world1.txt" />
-        <option value="$PROJECT_DIR$/src/resources/world2.txt" />
-        <option value="$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java" />
         <option value="$PROJECT_DIR$/src/dev/entities/Entity.java" />
         <option value="$PROJECT_DIR$/src/dev/graphics/GameCamera.java" />
         <option value="$PROJECT_DIR$/src/dev/graphics/SpriteSheet.java" />
@@ -154,16 +202,22 @@
         <option value="$PROJECT_DIR$/src/dev/tiles/CardboardTile.java" />
         <option value="$PROJECT_DIR$/src/dev/tiles/Tile.java" />
         <option value="$PROJECT_DIR$/src/display/Display.java" />
-        <option value="$PROJECT_DIR$/src/dev/states/OverState.java" />
         <option value="$PROJECT_DIR$/src/dev/entities/movingObjects/MovingObject.java" />
-        <option value="$PROJECT_DIR$/src/dev/states/GameState.java" />
-        <option value="$PROJECT_DIR$/src/dev/states/NextLevelState.java" />
-        <option value="$PROJECT_DIR$/src/dev/Game.java" />
-        <option value="$PROJECT_DIR$/src/dev/graphics/Assets.java" />
-        <option value="$PROJECT_DIR$/src/dev/World.java" />
         <option value="$PROJECT_DIR$/src/dev/states/TryAgainState.java" />
-        <option value="$PROJECT_DIR$/src/dev/entities/movingObjects/Player.java" />
         <option value="$PROJECT_DIR$/src/dev/entities/EntityManager.java" />
+        <option value="$PROJECT_DIR$/src/dev/states/IntroState.java" />
+        <option value="$PROJECT_DIR$/src/dev/graphics/Assets.java" />
+        <option value="$PROJECT_DIR$/src/dev/states/NextLevelState.java" />
+        <option value="$PROJECT_DIR$/src/dev/states/GameState.java" />
+        <option value="$PROJECT_DIR$/src/resources/worldtemp.txt" />
+        <option value="$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java" />
+        <option value="$PROJECT_DIR$/src/dev/states/OverState.java" />
+        <option value="$PROJECT_DIR$/src/resources/world3.txt" />
+        <option value="$PROJECT_DIR$/src/resources/world2.txt" />
+        <option value="$PROJECT_DIR$/src/resources/world1.txt" />
+        <option value="$PROJECT_DIR$/src/dev/entities/movingObjects/Player.java" />
+        <option value="$PROJECT_DIR$/src/dev/Game.java" />
+        <option value="$PROJECT_DIR$/src/dev/World.java" />
       </list>
     </option>
   </component>
@@ -286,10 +340,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557782257057" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557878738522" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HW2/csc413-02-stephlsechrist" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -334,12 +389,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555804781576</updated>
-      <workItem from="1555804785893" duration="58872000" />
+      <workItem from="1555804785893" duration="70198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58872000" />
+    <option name="totallyTimeSpent" value="70198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -411,15 +466,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/Rock.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/StoneBox.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/graphics/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/Wall.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -550,20 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/world1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/world2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/entities/movingObjects/CardboardBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -612,16 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/states/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/tiles/NoTile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -656,33 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/display/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/entities/statics/StopButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -691,57 +686,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#335#336#0" expanded="true" />
             <element signature="e#393#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/entities/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/states/OverState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#4486#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/states/IntroState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -756,20 +700,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/graphics/Assets.java">
+    <entry file="file://$PROJECT_DIR$/src/display/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="360">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/states/GameState.java">
+    <entry file="file://$PROJECT_DIR$/src/dev/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/entities/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="876">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1695#1696#0" expanded="true" />
+            <element signature="e#1728#1729#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
+            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#1973#1974#0" expanded="true" />
+            <element signature="e#2013#2014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/states/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/level2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/states/TryAgainState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="35" column="42" selection-start-line="35" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/states/IntroState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/level1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/graphics/Assets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -778,20 +794,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/states/NextLevelState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="360">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/states/TryAgainState.java">
+    <entry file="file://$PROJECT_DIR$/src/dev/states/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="136">
+          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/entities/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/entities/movingObjects/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/worldtemp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" selection-start-line="32" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/world3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/world2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/world1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/states/OverState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="24" column="121" selection-start-line="24" selection-start-column="121" selection-end-line="24" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -800,52 +880,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/entities/movingObjects/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="147" column="9" lean-forward="true" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+        <state relative-caret-position="275">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3980#3981#0" expanded="true" />
+            <element signature="e#3997#3998#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4201#4202#0" expanded="true" />
+            <element signature="e#4232#4233#0" expanded="true" />
+            <element signature="e#4277#4278#0" expanded="true" />
+            <element signature="e#4317#4318#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="113" selection-end-column="7" />
+        <state relative-caret-position="275">
+          <caret line="72" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3257#3258#0" expanded="true" />
-            <element signature="e#3293#3294#0" expanded="true" />
-            <element signature="e#3328#3329#0" expanded="true" />
-            <element signature="e#3358#3359#0" expanded="true" />
-            <element signature="e#3405#3406#0" expanded="true" />
-            <element signature="e#3443#3444#0" expanded="true" />
-            <element signature="e#3473#3474#0" expanded="true" />
-            <element signature="e#3503#3504#0" expanded="true" />
-            <element signature="e#3546#3547#0" expanded="true" />
-            <element signature="e#3584#3585#0" expanded="true" />
-            <element signature="e#3615#3616#0" expanded="true" />
-            <element signature="e#3645#3646#0" expanded="true" />
-            <element signature="e#3688#3689#0" expanded="true" />
-            <element signature="e#3726#3727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/entities/EntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1695#1696#0" expanded="true" />
-            <element signature="e#1757#1758#0" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1914#1915#0" expanded="true" />
-            <element signature="e#2013#2014#0" expanded="true" />
           </folding>
         </state>
       </provider>

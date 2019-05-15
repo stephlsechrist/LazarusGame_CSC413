@@ -34,8 +34,8 @@ public class World {
         entityManager.getPlayer().setX(spawnX1);
         entityManager.getPlayer().setY(spawnY1);
 
-        entityManager.addEntity(new StopButton(handler, 40, 160));
-        entityManager.addEntity(new StopButton(handler, 560, 160));
+        entityManager.addEntity(new StopButton(handler, 40, 120));
+        entityManager.addEntity(new StopButton(handler, 560, 120));
 //        entityManager.addEntity(new NextBox(handler, 1000, 800));
 
 
@@ -59,10 +59,14 @@ public class World {
             }
         }
         g.setColor(Color.BLACK);
+        // next box display background
         g.fillRect(540, 340, 80, 80);
-
-        g.setColor(Color.BLACK);
+        // life and level display background
         g.fillRect(20, 340, 80, 80);
+
+        g.setFont(new Font("Helvetica", Font.BOLD, 12));
+        g.setColor(Color.gray);
+        g.drawString("Level " + String.valueOf(handler.getGame().getLevelNum()), 40, 400);
 
         entityManager.render(g);
 

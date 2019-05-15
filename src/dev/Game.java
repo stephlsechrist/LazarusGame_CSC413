@@ -29,6 +29,7 @@ public class Game implements Runnable{
     private int width, height;
     private boolean isRunning = false;
     public String title;
+    private int levelNum = 1;
 
     private Thread thread;
     private BufferStrategy bs;
@@ -68,7 +69,7 @@ public class Game implements Runnable{
         overState = new OverState(handler);
         tryAgainState = new TryAgainState(handler);
         nextLevelState = new NextLevelState(handler);
-                State.setState(gameState);
+                State.setState(introState);
 //        State.setState(overState);
     }
 
@@ -103,6 +104,8 @@ public class Game implements Runnable{
     }
 
     public void nextLevel(){
+        levelNum++;
+
         if (State.getState() instanceof GameState){
             ((GameState) State.getState()).nextLevel();
         }
@@ -150,6 +153,14 @@ public class Game implements Runnable{
     public PlayerControl getControl() {
 
         return control;
+    }
+
+    public int getLevelNum() {
+        return levelNum;
+    }
+
+    public void setLevelNum(int levelNum) {
+        this.levelNum = levelNum;
     }
 
     public int getWidth() {
