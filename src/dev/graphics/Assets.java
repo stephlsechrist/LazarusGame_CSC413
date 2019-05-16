@@ -1,15 +1,16 @@
+/* **************************
+* Assets uses loadImage() defined in ImageLoader
+* to load all images used in game.
+ ************************** */
+
 package dev.graphics;
 
-import dev.graphics.ImageLoader;
-
-import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Assets {
     public static BufferedImage intro, bg, end, tryAgain, win,
     level1, level2, level3, player, cardboardBox, metalBox,
     stoneBox, woodBox, stopButton, wall, life;
-//    private static final int dim = 64;
 
     public static void init(){
         intro = ImageLoader.loadImage("/resources/Title.png");

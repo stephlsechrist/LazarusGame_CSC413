@@ -1,4 +1,10 @@
 /*
+ * PlayerControl uses boolean array that uses keyCode of input. if the index
+ * of array is true, action will occur
+ *
+ * not many controls in this game, so there's probably a more efficient way
+ * of doing this rather than creating an array of size 256...
+ *
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.

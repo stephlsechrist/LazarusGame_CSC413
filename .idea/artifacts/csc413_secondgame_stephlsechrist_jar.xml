@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="csc413-secondgame-stephlsechrist:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/csc413_secondgame_stephlsechrist_jar</output-path>
+    <root id="archive" name="csc413-secondgame-stephlsechrist.jar">
+      <element id="module-output" name="csc413-secondgame-stephlsechrist" />
+    </root>
+  </artifact>
+</component>

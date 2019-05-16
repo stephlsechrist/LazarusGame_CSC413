@@ -1,27 +1,23 @@
-/* TankGame
+/* Lazarus
 Created By: Stephanie Sechrist
-Last Edited: April 15, 2019
+Last Edited: May 15, 2019
 
-To make this game, I followed along with a YouTube tutorial made by CodeNMore.
+Most of code reused from my tank game.
+
+To make tank game, I followed along with a YouTube tutorial made by CodeNMore.
 The series is called "New Beginner 2D Game Programming" and a lot of my program
 structure comes from following along with him. In addition, my tank control was largely
 taken from Souza's TRE he provided on iLearn.
-
-The rest of the code is severely lacking in comments, as I pretty much ran out of time and prioritized
-getting requirements done over comments. Sorry if the structure is hard to follow. There's a lot going on,
-I'll definitely put many comments if I reuse this code for the second game!
  */
 
 package dev;
 
 import Display.Display;
-import dev.entities.movingObjects.Player;
 import dev.graphics.Assets;
 import dev.input.PlayerControl;
 import dev.states.*;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
 
 public class Game implements Runnable{
@@ -35,7 +31,8 @@ public class Game implements Runnable{
     private BufferStrategy bs;
     private Graphics g;
 
-    // States
+    // States public so can be accessed everywhere
+    // probably not best way to do this, but it works for now
     public State gameState;
     public State introState;
     public State overState;
@@ -58,6 +55,7 @@ public class Game implements Runnable{
     private void init(){
         display = new Display(title, width, height);
         display.getFrame().addKeyListener(control);
+
         // Load all images
         Assets.init();
 
@@ -69,10 +67,13 @@ public class Game implements Runnable{
         overState = new OverState(handler);
         tryAgainState = new TryAgainState(handler);
         nextLevelState = new NextLevelState(handler);
-                State.setState(introState);
+
+        // starts game on intro screen
+        State.setState(introState);
 //        State.setState(overState);
     }
 
+    // update controls and update current state
     private void tick(){
         control.tick();
 
@@ -93,8 +94,9 @@ public class Game implements Runnable{
         g = bs.getDrawGraphics();
         // clear screen
         g.clearRect(0,0, width, height);
-        //Draw
 
+        //Draw
+        // render state
         if (State.getState() != null)
             State.getState().render(g);
 
@@ -103,6 +105,8 @@ public class Game implements Runnable{
         g.dispose();
     }
 
+    // nextLevel incrememnts levelNum and
+    // changes to nextLevel state to get to next level
     public void nextLevel(){
         levelNum++;
 
@@ -111,6 +115,9 @@ public class Game implements Runnable{
         }
     }
 
+    // run game!
+    // math from CodeNMore; no way i could have figured out
+    // the timer math alone!
     public void run(){
         init();
 
@@ -151,7 +158,6 @@ public class Game implements Runnable{
     }
 
     public PlayerControl getControl() {
-
         return control;
     }
 

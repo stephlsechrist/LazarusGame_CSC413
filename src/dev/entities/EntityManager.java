@@ -1,3 +1,8 @@
+/* ******************************************
+ * EntityManager manages entities array. Adds player
+ * too entities array in constructor.
+ ****************************************** */
+
 package dev.entities;
 
 import dev.Handler;
@@ -6,7 +11,6 @@ import dev.entities.movingObjects.WallBox;
 import dev.entities.statics.StopButton;
 
 import java.awt.*;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class EntityManager {
@@ -18,10 +22,10 @@ public class EntityManager {
         this.handler = handler;
         this.player = player;
         entities = new ArrayList<Entity>();
-        //        addEntity(new LifeBoost(handler, 100, 100));
         addEntity(player);
     }
 
+    // calls tick method implemented in each Entity subclass
     public void tick(){
         for (int i = 0; i < entities.size(); i++){
             Entity e = entities.get(i);
@@ -29,20 +33,24 @@ public class EntityManager {
         }
     }
 
+    // calls render method implemented in each Entity subclass
     public void render(Graphics g){
         for (int i = 0; i < entities.size(); i++){
-
             Entity e = entities.get(i);
             e.render(g);
         }
     }
 
+    // removes a specific entity
     public void removeEntity(Entity e){
         if (entities.contains(e)) {
             entities.remove(e);
         }
     }
 
+    // clears entire entity array, unless it's a wall or stop button
+    // intended to clear all boxes that have fallen, and player, so that
+    // level can restart
     public void clearEntities(){
         for (int i = 0; i < entities.size(); i++){
             if (!(entities.get(i) instanceof WallBox) && !(entities.get(i) instanceof StopButton)) {
@@ -52,12 +60,16 @@ public class EntityManager {
             }
         }
 
+        // add player back
         addEntity(player);
     }
 
+    // add entity
     public void addEntity(Entity e){
         entities.add(e);
     }
+
+    // getters and setters
 
     public Handler getHandler() {
         return handler;
@@ -83,6 +95,8 @@ public class EntityManager {
         this.entities = entities;
     }
 
+
+    // used for debugging
     public void printContents(){
 
         for(int i = 0; i < entities.size(); i++){

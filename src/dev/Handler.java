@@ -1,8 +1,9 @@
+/* Handler to access other classes and their
+attributes
+ */
 package dev;
 
-import dev.Game;
 import dev.input.PlayerControl;
-import dev.World;
 
 public class Handler {
     private Game game;

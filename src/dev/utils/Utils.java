@@ -10,6 +10,8 @@ public class Utils {
         StringBuilder builder = new StringBuilder();
 
         try{
+            // my attempt at getting relative paths to work with anyone's computer
+            // still wouldn't build JAR.
             String currentDir = System.getProperty("user.dir");
             //            System.out.println(currentDir);
             //            System.out.println(currentDir + path);

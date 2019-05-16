@@ -1,3 +1,7 @@
+/**************************************
+ * Stone box is box type 4. Crushes all
+ * other boxes.
+************************************** */
 package dev.entities.movingObjects;
 
 import dev.Handler;
@@ -13,7 +17,6 @@ public class StoneBox extends Box {
 
     @Override
     public boolean isSolid(){
-
         return true;
     }
 
@@ -22,15 +25,15 @@ public class StoneBox extends Box {
         return boxType;
     }
 
+    // call moveFall()
     @Override
     public void tick(){
-
         super.tick();
     }
 
+    // draw Stone box
     @Override
     public void render(Graphics g) {
-
         g.drawImage(Assets.stoneBox, x, y, null);
     }
 }

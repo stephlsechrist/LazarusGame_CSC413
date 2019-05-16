@@ -1,3 +1,9 @@
+/* **************************
+ * ImageLoader used by Assets to load an image
+ * using class.getResource method and given relative
+ * path
+ ************************** */
+
 package dev.graphics;
 
 import javax.imageio.ImageIO;

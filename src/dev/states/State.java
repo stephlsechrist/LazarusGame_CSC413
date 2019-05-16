@@ -1,3 +1,7 @@
+/* ****************************
+All states have a handler, tick, and render.
+****************************** */
+
 package dev.states;
 
 import dev.Game;

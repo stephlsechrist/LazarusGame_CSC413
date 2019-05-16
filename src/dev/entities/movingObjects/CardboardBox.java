@@ -1,6 +1,12 @@
+/***********************************************
+ * Cardboard box is lightest of boxes. Will be
+ * crushed by any other box.
+ **********************************************/
+
 package dev.entities.movingObjects;
 
 import dev.Handler;
+
 import dev.graphics.Assets;
 
 import java.awt.*;
@@ -14,7 +20,6 @@ public class CardboardBox extends Box{
 
     @Override
     public boolean isSolid(){
-
         return true;
     }
 
@@ -23,11 +28,13 @@ public class CardboardBox extends Box{
         return this.boxType;
     }
 
+    // call moveFall()
     @Override
     public void tick(){
         super.tick();
     }
 
+    // draw cardboard box above player coordinates
     public void render(Graphics g)
     {
         g.drawImage(Assets.cardboardBox, x, y, null);

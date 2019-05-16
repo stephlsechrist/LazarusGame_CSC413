@@ -1,10 +1,14 @@
+/* **************************************
+* Entites are game objects, static or moving.
+* They all have collision bounds defined by
+* a rectangle. All entities are 40x40 pixels.
+ ************************************** */
+
 package dev.entities;
 
-import dev.Game;
 import dev.Handler;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public abstract class Entity {
 
@@ -39,6 +43,9 @@ public abstract class Entity {
         }
     }
 
+    // checks each entity in the Entity array to see if it intersects with
+    // this object based on collision rectangles of this object and
+    // checked object
     public boolean checkEntityCollisions(int xOffset, int yOffset){
         for (Entity e : handler.getWorld().getEntityManager().getEntities()){
             if (e.equals(this))
@@ -50,11 +57,17 @@ public abstract class Entity {
         return false;
     }
 
+    // returns Rectangle at x coordinate determined by current x and xoffset,
+    // at y cooridnate determined by current y and yoffset,
+    // of 40 x 40 dimension
+    // basically returns rectangle surrounding object at specified location
     public Rectangle getCollisionBounds(int xOffset, int yOffset){
         return new Rectangle((x + bounds.x + xOffset), (y + bounds.y + yOffset),
                 bounds.width, bounds.height);
     }
 
+    // return Entity whose rectangle is intersecting with this object's rectangle
+    // otherwise, return null
     public Entity getEntityCollided(int xOffset, int yOffset){
         for (Entity e : handler.getWorld().getEntityManager().getEntities()) {
             if (e.equals(this))
@@ -85,6 +98,8 @@ public abstract class Entity {
     public int getBoxType (){
         return boxType;
     }
+
+    // leftover from tank game
 
     public boolean isActive() {
         return active;

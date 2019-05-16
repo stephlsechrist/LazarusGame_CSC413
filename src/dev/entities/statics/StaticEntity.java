@@ -1,3 +1,8 @@
+/* ****************************
+* StaticEntity underutilized in this
+* game. could have used for wall boxes
+ **************************** */
+
 package dev.entities.statics;
 
 import dev.Handler;
@@ -7,7 +12,6 @@ import java.awt.*;
 
 public class StaticEntity extends Entity {
     public StaticEntity(Handler handler, int x, int y) {
-
         super(handler, x, y);
     }
 

@@ -109,14 +109,6 @@ public class World {
         }
     }
 
-//    public void worldReset(){
-//        lifeCount = handler.getWorld().getEntityManager().getPlayer().getLifeCount();
-//        world = new World(handler, "\\src\\resources\\world1.txt");
-//        handler.setWorld(world);
-//        handler.getWorld().getEntityManager().getPlayer().setLifeCount(lifeCount);
-//        handler.getWorld().getEntityManager().clearEntities();
-//    }
-
     public void setTileArray(int x, int y, int newID){
         this.tilePos[x][y] = newID;
     }

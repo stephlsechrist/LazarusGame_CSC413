@@ -1,3 +1,8 @@
+/**********************************************
+ * Metal box of box type 3. Crushes cardboard
+ * and wood boxes. Crushed by stone box.
+ **********************************************/
+
 package dev.entities.movingObjects;
 
 import dev.Handler;
@@ -24,12 +29,14 @@ public class MetalBox extends Box {
         return boxType;
     }
 
+    // call moveFall()
     @Override
     public void tick(){
 
         super.tick();
     }
 
+    // Draw metal box.
     @Override
     public void render(Graphics g){
 
