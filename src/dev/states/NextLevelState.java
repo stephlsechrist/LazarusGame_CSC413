@@ -14,7 +14,7 @@ public class NextLevelState extends State {
     }
 
     @Override
-    public void tick() {;
+    public void tick() {
         if(handler.getControl().play) {
             State.setState(handler.getGame().gameState);
             handler.getGame().nextLevel();
