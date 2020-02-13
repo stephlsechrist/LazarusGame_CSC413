@@ -1,7 +1,6 @@
 # csc413-SecondGame
 
 ## Student Name : Stephanie Sechrist
-## Student ID : 918679078
 
 This game was built in IntelliJ IDEA 2018.3.4 using Java version 11. 
 The current working directory relative to my github repo is /src. Main is in Launcher
